@@ -11,7 +11,7 @@ cycler==0.12.1
 darkdetect==0.8.0
 debugpy==1.8.1
 decorator==5.1.1
-Django==5.0.6
+Django==4.2.13
 executing==2.0.1
 folium==0.16.0
 fontawesomefree==6.5.1
