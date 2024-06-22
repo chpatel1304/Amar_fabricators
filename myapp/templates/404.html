@@ -1,0 +1,30 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOT FOUND</title>
+    <link rel="stylesheet" href="{% static 'css/page_404.css' %}">
+</head>
+<body>
+    <div class="main-404">
+        <div class="head-404">
+            <div style="font-size: 50px; font-style: italic;">Oopss...</div>
+        </div>
+        <div class="content-404">
+            <div class="img-404">
+                <img src="{% static 'images/page-404-1.svg' %}" alt="" style="height: 300px;">
+            </div>
+            <div class="info-404">
+                <div style="font-size: 30px; font-style: italic; font-weight: bold;">This page is taking a break in the warehouse !</div>
+                <div style="font-size: 30px; font-style: italic;">Come Later</div>
+                <a href="{% url 'index' %}"><button  class="btn_404">Home</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

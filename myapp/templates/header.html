@@ -1,0 +1,296 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/header-logo-removebg-preview.png' %}" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="{% static 'css/h1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/div.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vision.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/bs.css' %}">
+    
+    <style type="text/css">
+        .header {
+    display: flex;
+    flex-direction: column;
+    background-color: white; /* Set the header background color to white */
+    justify-content: center;
+    height: 200px;
+    padding: 0;
+/*    gap: 20px;*/
+}
+
+.header-logo-image img {
+    height: 140px;
+    width: 200px;
+}
+
+.header-links {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+#primary {
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 50px;
+}
+
+#primary li {
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+#primary li a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    font-family: 'Open Sans';
+    font-size: 22px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(33, 33, 97); /* Set the initial text color to black */
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(33, 33, 97); /* Set the initial text fill color to black */
+    background-image: linear-gradient(to right, #23abd4 50%, #23abd4 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+#primary li a:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #23abd4;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
+}
+
+#primary li a:hover {
+    background-position: 0%;
+}
+
+#primary li a:hover:before {
+    width: 100%;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding-top: 80px;
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 50px;
+    right: 0;
+}
+
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.hamburger:hover .dropdown {
+    display: block;
+}
+ .header-logo-image{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        padding-top: 10px;
+        }
+#head{
+     font-family: 'Open Sans';
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(33, 33, 97);
+        }
+
+@media only screen and (max-width: 950px) {
+    #primary li a {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 861px) {
+    #primary{
+        gap: 25px;
+    }
+    #primary li a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 743px) {
+    #primary{
+        gap: 20px;
+    }
+    #primary li a {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 718px) {
+    #primary {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .header{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .header-logo-image{
+        flex-direction: column;
+    }
+    #head{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo-image">
+            <img src="{% static 'images/header-logo-removebg-preview.png' %}" alt="" style=" width: 120px; height:100px;">
+            <div id="head">Amar Fabricators and Engineers</div>
+        </div>
+        <div class="header-links">
+            <ul id="primary">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+                <li><a href="{% url 'manu-cap' %}">Manufracting Capablities</a></li>
+                <li><a href="{% url 'career' %}">Career</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="header-search">
+            <div class="hamburger" >
+                <div class="fa-solid fa-bars fa-xl" style="color: black;"></div>
+                <ul class="dropdown">
+                 <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+                <li><a href="{% url 'manu-cap' %}">Manufracting Capablities</a></li>
+                <li><a href="{% url 'career' %}">Career</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% block content%}
+    {% endblock %}
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="{% static 'images/footer-logo.jpg' %}" alt="" style="height: 120px;">
+                </div>
+                <div class="footer-quote">
+                    <div>response@amarfabricators.co.in</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="links-head">
+                    <div style="font-weight: bolder; font-size: 20px; font-style: italic; color: white;">IMPORTANT LINKS</div>
+                </div>
+                <div class="links">
+                    <div class="footer_imp_links">
+                        <ul id="primary1">
+                            <li class="fa fa-angle-right" style="color: white"><a href="{% url 'home' %}">HOME</a></li>
+                            <li class="fa fa-angle-right" style="color: white"><a href="{% url 'about-us' %}">ABOUT US</a></li>
+                            <li class="fa fa-angle-right" style="color: white"><a href="{% url 'manu-cap' %}">MANUFACTURING CAPABILITIES</a></li>
+                            <li class="fa fa-angle-right" style="color: white"><a href="{% url 'career' %}">CAREER</a></li>
+                            <li class="fa fa-angle-right" style="color: white"><a href="{% url 'contact' %}">CONTACT US</a></li>
+                        </ul>
+                    </div>   
+                </div>
+            </div>
+            <div class="footer-loaction">
+                <div class="fact-name">
+                    <div style="font-weight: bolder; font-size: 20px; font-style: italic; color: white;">AMAR FABRICATORS AND ENGINEERS</div>
+                </div>
+                <div class="loaction-fact">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.3155290860864!2d72.63960407479605!3d22.9754219180871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e889ef8ef761d%3A0xb6ab435521ee6ad!2sAMAR%20FABRICATORS%20%26%20ENGINEERS!5e0!3m2!1sen!2sin!4v1716620082317!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="web-creator">
+            <div class="footer-creator">
+                <div style="font-size: 10px; font-style: italic; font-weight: bolder; color: white;">Developed By :</div>
+                <div class="ekal">
+                    <div style="font-size: 10px; font-style: italic; font-weight: bolder; color: white;">EKAL SORATHIYA</div>
+                    <div class="symbol">
+                        <a href="https://www.linkedin.com/in/ekal-sorathiya-0bab4226b/?originalSubdomain=in"target="_blank" class=" fa-brands fa-linkedin-in" style="text-decoration: none; color: white;"></a>
+                        <a href="https://github.com/EkalSorathiya" class="fa-brands fa-github " target="_blank" style="text-decoration: none; color: white;"></a>
+                    </div>
+                </div>
+                <div class="chirag">
+                    <div style="font-size: 10px; font-style: italic; font-weight: bolder; color: white;">CHIRAG PATEL</div>
+                    <div class="symbol">
+                        <a class=" fa-brands fa-linkedin-in" target="_blank" href="https://www.linkedin.com/in/chirag-patel-178a87291/" style="text-decoration: none; color: white;"></a>
+                        <a href="https://github.com/chpatel1304" class=" fa-brands fa-github " target="_blank" style="text-decoration: none; color: white;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

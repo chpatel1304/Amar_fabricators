@@ -1,0 +1,74 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career</title>
+    <link rel="stylesheet" href="{% static 'css/Career.css' %}" type="text/css">
+</head>
+<body>
+    <div class="main-career">
+        <div class="head-career">
+            <div style="font-size: 40px; font-weight: bolder; font-style: italic;">Career</div>
+            <div style="font-size: 20px; font-weight: bolder; font-style: italic; text-align: center;">Get In Touch And Let Us Know How We Can Help</div>
+        </div>
+        {% if msg %}
+            
+            <b style="color:blue;">{{msg}}</b>
+
+        {% endif %}
+        <div class="content-career">
+            <div class="form-career">
+                <form method="post" enctype="multipart/form-data" action="{% url 'career' %}">
+                    {% csrf_token %}
+
+                    <div class="group">      
+                    <input onclick="disp()" name="fullname" pattern="^[a-zA-Z ]+$" type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar1"></span>
+                    <label>Name</label>
+                    </div>
+
+                    <div class="group">      
+                    <input name="phone" type="tel" maxlength="10" required>
+                    <span class="highlight"></span>
+                    <span class="bar1"></span>
+                    <label>Phone</label>
+                    </div>
+                    
+                    <div class="group">      
+                    <input name="email" type="email" required>
+                    <span class="highlight"></span>
+                    <span class="bar1"></span>
+                    <label>Email</label>
+                    </div>
+                    
+                    <div style="padding-bottom: 10px;">      
+                    <input name="cv" accept=".pdf" type="file" required>
+                    </div>
+                    
+                    
+                    <div style="display: flex; justify-content: center;">      
+                        <button class="submit_button ">SUBMIT</button>
+                    
+                    </div>
+                </form>
+            </div>
+            <div class="images-career">
+                <img src="{% static 'images/career-1.jpg' %}" alt="" id="career-img-1">
+                <img src="{% static 'images/career-2.jpg' %}" alt="" id="career-img-2">
+            </div> 
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+if(window.history.replaceState){
+    window.history.replaceState(null,null,window.location.href);
+}
+</script>
+</html>
+
+{% endblock %}

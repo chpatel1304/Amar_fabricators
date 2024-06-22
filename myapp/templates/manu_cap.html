@@ -1,0 +1,128 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANUFACTURING CAPABILITIES</title>
+    <link rel="stylesheet" href="{% static 'css/manu_cap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/manu_cap2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/manu_cap3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/manu_cap4.css' %}">
+    <link rel="stylesheet" href="{% static 'css/manu_cap5.css' %}">
+    <link rel="stylesheet" href="{% static 'css/manu_cap6.css' %}">
+    <link rel="stylesheet" href="{% static 'css/manu_cap1.css' %}">
+
+</head>
+<body>
+    <div class="main-manu">
+        <div class="machining-process" style="padding: 10px;">
+            <div class="machining-head">
+                <div class="machining-head-img" style="background-image: url({% static 'images/manu-cap-bg.png' %});">
+                    <div class="mp-head">MACHINING PROCESS</div>
+                </div>
+            </div>
+            <div class="machining-content-1">
+                <div class="machining-img-1">
+                    <img src="{% static 'images/manu-cap-1.jpg' %}" alt="" id="mp-img-1-1">
+                    <img src="{% static 'images/manu-cap-2.jpg' %}" alt="" id="mp-img-1-2">
+                </div>
+                <div class="machining-info-1">
+                    <div class="machining-name-1" style="font-size: 48px; font-weight: bolder; font-style: italic;">CNC Turnings</div>
+                    <div class="machining-desp-1" style="font-size: 20px; font-style: italic;"> Our state-of-the-art CNC turning machines and experienced team ensure that we deliver parts of the highest quality, tailored to your exact specifications. We are committed to innovation, precision, and customer satisfaction, making us a trusted partner for customer needs. We can provide heavy duty machining services ranging up to 1 meter diameter.</div>
+                </div>
+            </div>
+            <!-- MANU CAP 1 -->
+            <div class="machining-content-2">
+                <div class="machining-img-2">
+                    <img src="{% static 'images/manu-cap-3.png' %}" alt="" id="mp-img-2-1">
+                    <img src="{% static 'images/manu-cap-4.jpg' %}" alt="" id="mp-img-2-2" style=" left: 90px;">
+                </div>
+                <div class="machining-info-2">
+                    <div class="machining-name-2" style="font-size: 48px; font-weight: bolder; font-style: italic;">CNC Vertical milling centers</div>
+                    <div class="machining-desp-2" style="font-size: 20px; font-style: italic">We deliver medium to large size parts with greater accuracy, quality with respect to time. Our machine is capable to handle heavy duty components up to 2600mm X1500mm x800mm size.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Joining Process -->
+        <div class="joining-process">
+            <div class="joining-head">
+                <div class="joining-head-img" style="background-image: url({% static 'images/manu-cap-bg.png' %});">
+                    <div class="jp-head">JOINING PROCESS</div>
+                </div>
+            </div>
+            <div class="joining-content-1">
+                <div class="joining-img-1">
+                    <img src="{% static 'Amar Project/myapp/static/images/manu-cap-5.jpg' %}" alt="" id="jp-img-1-1" style="width: 400px; ">
+                    <img src="{% static 'images/manu-cap-6.png' %}" alt="" id="jp-img-1-2" style="left: 120px;">
+                </div>
+                <div class="joining-info-1">
+                    <div class="joining-name-1" style="font-size: 48px; font-weight: bolder; font-style: italic;">Tig Welding robot</div>
+                    <div class="joining-desp-1" style="font-size: 20px; font-style: italic;"> Our 10 Axis TIG Welding Robotic Cell is under installation. Our robotic cell is Capable of performing continuous operations with minimal downtime, unbeatable quality and precision. It significantly reduces cycle times and increase throughput.</div>
+                </div>
+            </div>
+            <!-- MANU CAP 3 -->
+            <div class="joining-content-2">
+                <div class="joining-img-2">
+                    <img src="{% static 'images/manu-cap-7.jpg' %}" alt="" id="jp-img-2-1">
+                    <img src="{% static 'images/manu-cap-8.jpg' %}" alt="" id="jp-img-2-2">
+                </div>
+                <div class="joining-info-2">
+                    <div class="joining-name-2" style="font-size: 48px; font-weight: bolder; font-style: italic;">Mig welding process</div>
+                    <div class="joining-desp-2" style="font-size: 20px; font-style: italic;">We specialize in providing top-notch MIG (Metal Inert Gas) welding services tailored to meet the diverse needs of our clients. MIG welding, also known as Gas Metal Arc Welding (GMAW), is a versatile and efficient welding process suitable for a wide range of applications and materials.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Formimg Process -->
+        <div class="forming-process">
+            <div class="forming-head">
+                <div class="forming-head-img" style="background-image: url({% static 'images/manu-cap-bg.png' %});">
+                    <div class="fp-head">FORMING PROCESS</div>
+                </div>
+            </div>
+            <div class="forming-content-1">
+                <div class="forming-img-1">
+                    <img src="{% static 'images/manu-cap-9.avif' %}" alt="" id="fp-img-1-1">
+                    <img src="{% static 'images/manu-cap-10.avif' %}" alt="" id="fp-img-1-2">
+                </div>
+                <div class="forming-info-1">
+                    <div class="forming-name-1" style="font-size: 48px; font-weight: bolder; font-style: italic;">Hydraulic press</div>
+                    <div class="forming-desp-1" style="font-size: 20px; font-style: italic;"> We offer expert hydraulic press services designed to meet the diverse needs of our clients across various industries. A hydraulic press uses a hydraulic cylinder to generate a compressive force force upto 1000 Tons, making it ideal for tasks requiring high pressure and precision.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Special Process -->
+        <div class="special-process">
+            <div class="special-head">
+                <div class="special-head-img" style="background-image: url({% static 'images/manu-cap-bg.png' %});">
+                    <div class="sp-head">SPECIAL PROCESS</div>
+                </div>
+            </div>
+            <div class="special-content-1">
+                <div class="special-img-1">
+                    <img src="{% static 'images/manu-cap-11.jpg' %}" alt="" id="sp-img-1-1">
+                    <img src="{% static 'images/manu-cap-12.jpg' %}" alt="" id="sp-img-1-2">
+                </div>
+                <div class="special-info-1">
+                    <div class="special-name-1" style="font-size: 48px; font-weight: bolder; font-style: italic;">Corrosion Resistance Painting</div>
+                    <div class="special-desp-1" style="font-size: 20px; font-style: italic;">  To protect corrosion on metal parts we provide industrial corrosion resistance painting services to our customer.</div>
+                </div>
+            </div>
+            <!-- MANU CAP 1 -->
+            <div class="special-content-2">
+                <div class="special-img-2">
+                    <img src="{% static 'images/manu-cap-13.jpg' %}" alt="" id="sp-img-2-1">
+                    <img src="{% static 'images/manu-cap-14.jpg' %}" alt="" id="sp-img-2-2">
+                </div>
+                <div class="special-info-2">
+                    <div class="special-name-2" style="font-size: 48px; font-weight: bolder; font-style: italic;"> Portable CMM Service</div>
+                    <div class="special-desp-2" style="font-size: 20px; font-style: italic;">we provide advanced Coordinate Measuring Machine (CMM) which works up to 2400mm Diameter ,services to ensure the highest level of precision in your manufacturing and quality control processes. Our CMM services are designed to meet the rigorous standards of various industries, guaranteeing accuracy, reliability, and efficiency.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
